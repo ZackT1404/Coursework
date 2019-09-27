@@ -7,9 +7,9 @@ public class Main {
     public static Connection db = null;
     public static void main(String[] args) {
         openDatabase("Quiz.db");
-
-        // code using the database goes here!
-
+        QuestionsController.listQuestions();
+        QuestionsController.insertQuestions(2, "When was the original Xbox released?");
+        QuestionsController.listQuestions();
         closeDatabase();
 
     }
