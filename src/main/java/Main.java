@@ -13,6 +13,8 @@ public class Main {
         closeDatabase();
 
     }
+
+    //TEST
     private static void openDatabase(String dbFile)
     {
 
