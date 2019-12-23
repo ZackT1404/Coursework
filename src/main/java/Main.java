@@ -1,5 +1,4 @@
 import org.sqlite.SQLiteConfig;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -8,13 +7,12 @@ public class Main {
     public static void main(String[] args) {
         openDatabase("Quiz.db");
         QuestionsController.listQuestions();
-        QuestionsController.insertQuestions(2, "When was the original Xbox released?");
-        QuestionsController.listQuestions();
+        QuestionsController.insertQuestions(1, "When was the original Xbox released?", "1", "2","3", "4", 1);
         closeDatabase();
 
     }
 
-    //TEST
+
     private static void openDatabase(String dbFile)
     {
 
