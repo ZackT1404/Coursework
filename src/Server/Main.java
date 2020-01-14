@@ -51,12 +51,13 @@ public class Main {
 //New server code shown below- will not run.
 
 package Server;
-import org.eclipse.jetty.server.Server;
+/*import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.servlet.ServletContainer;
+import org.glassfish.jersey.servlet.ServletContainer;*/
+import Controllers.QuizController;
 import org.sqlite.SQLiteConfig;
 import java.io.FileReader;
 import java.io.BufferedReader;
@@ -73,7 +74,7 @@ public class Main {
    closeDatabase();
      }*/
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
 
         openDatabase("Quiz.db");
 
@@ -93,9 +94,14 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }*/
+
+    public static void main(String[] args) {
+        openDatabase("Quiz.db");
+        //QuizController.QuizList();
+        QuizController.QuizInsert(2, "Japanese Videogames", "A quiz on the historic games of Japan.");
+        closeDatabase();
     }
-
-
 
     private static void openDatabase(String dbFile){
         try{

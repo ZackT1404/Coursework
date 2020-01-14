@@ -1,15 +1,15 @@
 package Controllers;
 import Server.Main;
-import org.glassfish.jersey.media.multipart.FormDataParam;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
+//import org.glassfish.jersey.media.multipart.FormDataParam;
+//import org.json.simple.JSONArray;
+//import org.json.simple.JSONObject;
+//import javax.ws.rs.*;
+//import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.UUID;
 
-@Path ("Answer/")
+//@Path ("Answer/")
 
 public class AnswerController {
 
@@ -40,7 +40,7 @@ public class AnswerController {
     }
 
 
-    @GET
+    /*@GET
 
     @Path("get/{questionid}")
 
@@ -94,5 +94,5 @@ public class AnswerController {
 
         }
 
-    }
+    }*/
 }
