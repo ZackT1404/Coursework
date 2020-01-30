@@ -11,7 +11,7 @@ import java.util.UUID;
 
 //@Path ("Quiz/")
 
-public class QuizController {
+public class    QuizController {
 
 
     public static void QuizList() {
@@ -57,6 +57,16 @@ public class QuizController {
             }
 
     }
+
+        public static void QuizUpdate(int quizid, String quiztitle, String quizdescrption) {
+        try {
+
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE Quiz SET quizid=?, quiztitle=?, quizdescription=? WHERE quizid=?");
+            ps.setInt(1, quizid);
+            ps.setString(2, quiztitle);
+            ps.setString(3, quizdescrption);
+        }
+        }
 
     // Phase 2 code
     /*@GET
