@@ -7,36 +7,28 @@ import Server.Main;
 //import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLOutput;
 import java.util.UUID;
 
 //@Path ("Answer/")
 
 public class AnswerController {
-
+    //This fetches every answer in the database.
     public static void Answer() {
-
         try {
-
             PreparedStatement ps = Main.db.prepareStatement("SELECT answerid, Answer, correct FROM Answers");
-
             ResultSet results = ps.executeQuery();
-
+            //Gets every instance of a record in answers
             while (results.next()) {
-
                 int answerid = results.getInt(1);
-
-                String Answer = results.getString(2);
-
+                String answer = results.getString(2);
                 Boolean correct = results.getBoolean(3);
-
+                //Temporary
+                System.out.println("AnswerID " + answerid + " Answer " + answer + " Correct " + correct);
             }
-
         } catch (Exception exception) {
-
             System.out.println("Database Error:" + exception.getMessage());
-
         }
-
     }
 
 

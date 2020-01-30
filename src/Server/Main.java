@@ -57,6 +57,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;*/
+import Controllers.AnswerController;
 import Controllers.QuizController;
 import org.sqlite.SQLiteConfig;
 import java.io.FileReader;
@@ -99,7 +100,7 @@ public class Main {
     public static void main(String[] args) {
         openDatabase("Quiz.db");
         //QuizController.QuizList();
-        QuizController.QuizInsert(2, "Japanese Videogames", "A quiz on the historic games of Japan.");
+        AnswerController.Answer();
         closeDatabase();
     }
 

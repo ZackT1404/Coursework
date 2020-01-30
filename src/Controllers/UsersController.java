@@ -150,7 +150,7 @@ public class UsersController {
             System.out.println("user/logout");
 
 
-            PreparedStatement ps1 = Main.db.prepareStatement("SELECT UserID, token FROM Users WHERE token = ?");
+            PreparedStatement ps1 = Main.db.prepareStatement("SELECT UserID FROM Users, token WHERE token = ?");
 
             ps1.setString(1, token);
 
